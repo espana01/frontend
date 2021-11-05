@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Reto 2 para Subir</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- comienzo tabla listar -->
+        <div class="consultar mt-4">
+            <div class="row">
+                <div class="col-6">
+                    <h1>AUDITORIOS</h1>
+                </div>
+                <div class="col-6">
+                    <a href="client.html" class="btn btn-primary">CLIENTES</a>
+                    <a href="message.html" class="btn btn-primary">MENSAJES</a>
+
+                </div>
+            </div>
+            <div id="btnFormulario1">
+                <input id="btnVerDatos" type="submit" onclick="cargarDatosTable()" value="Ver Tabla" class="btn-outline-info">
+            </div>
+            <div class="box-body">
+                <div class="table table-responsive">
+                    <table class="table table-hover">
+                        <thead id="headr">
+
+                        </thead>
+                        <tbody id="tbodyAuditorio">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- fin dela tabla listar -->
+
+        <hr>
+
+        <!-- Detalles -->
+        <div class="detalles">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-warning">DETALLES</h2>
+                </div>
+                <div class="col-12">
+                    <div id="detallesAuditorio">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin detalles -->
+        <hr>
+
+        <!-- Inicio del formulario -->
+        <div class="fomulario">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-primary">AGREGAR/ACTUALIZAR DATOS</h2>
+                </div>
+                <div class="col-12">
+                    <form id="formularioAuditorio">
+                        <label>Id</label>
+                        <input id="myId" type="number" placeholder="Ingresa Id"><br>
+
+                        <label>Propietario</label>
+                        <input id="owner" type="text" placeholder="Ingresa Propietario"><br>
+
+                        <label>Capacidad</label>
+                        <input id="capacity" type="number" placeholder="Ingresa Capacidad"><br>
+
+                        <label>Categoria_id</label>
+                        <input id="category_id" type="number" placeholder="Ingresa Categoria_id"><br>
+
+                        <label>Nombre</label>
+                        <input id="name" type="text" placeholder="Ingresa Nombre">
+
+                        <div id="btnFormulario">
+                            <input id="btnCrear" type="submit" onclick="crearAuditorio()" value="Crear" class="btn-primary">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--Fin del formulario  -->
+    </div>
+    <script src="/js/Auditorio.js"></script>
+    <!-- Fin auditorio -->
+</body>
+
+</html>
